@@ -36,7 +36,7 @@ class AliFemtoLambdaEventCollection2
     void SetBufferSize(short a){fBufferSize = a;} //set size of event buffer
     
 #ifdef __ROOT__
-    ClassDef(AliFemtoLambdaEventCollection2, 1);
+    ClassDef(AliFemtoLambdaEventCollection2, 2);
 #endif
 };
 #endif

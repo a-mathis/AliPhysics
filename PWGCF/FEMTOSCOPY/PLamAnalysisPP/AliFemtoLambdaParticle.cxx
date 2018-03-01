@@ -88,13 +88,11 @@ AliFemtoLambdaParticle &AliFemtoLambdaParticle::operator=(const AliFemtoLambdaPa
   fEtaNegdaughter = obj.fEtaNegdaughter;
   fReal = obj.fReal;
 
+
   for(int i=0;i<9;i++)
    {
-     for(int j=0;j<3;j++)
-       {
-	 fPosDaughPosTPC[i][j] = obj.fPosDaughPosTPC[i][j];
-	 fNegDaughPosTPC[i][j] = obj.fNegDaughPosTPC[i][j];
-       }
+     fPositionPosTPC[i] = obj.fPositionPosTPC[i];
+     fPositionNegTPC[i] = obj.fPositionNegTPC[i];
    }
   
   

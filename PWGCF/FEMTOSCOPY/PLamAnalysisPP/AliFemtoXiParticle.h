@@ -38,7 +38,7 @@ class AliFemtoXiParticle // Reconstructed Lambdas parameters needed for correlat
   double fPointing;
   
 #ifdef __ROOT__
-  ClassDef(AliFemtoXiParticle, 1);
+  ClassDef(AliFemtoXiParticle, 2);
 #endif
 };
 #endif

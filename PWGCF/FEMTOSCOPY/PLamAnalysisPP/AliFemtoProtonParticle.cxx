@@ -30,8 +30,15 @@ AliFemtoProtonParticle::AliFemtoProtonParticle() :
   fPhi(0),
   fPhistar(),
   fEta(0),
-  fReal(kFALSE)
+  fReal(kFALSE),
+  fProtonTag(kTRUE)
 {
+
+  fMomentum.SetXYZ(0.,0.,0.);
+  fMomentumMC.SetXYZ(0.,0.,0.);
+  fMomentumMCMother.SetXYZ(0.,0.,0.);
+  fMomentumMCMotherParton.SetXYZ(0.,0.,0.);
+
   //Default constructor
 }
 //_____________________________________________________________________________
@@ -67,22 +74,23 @@ AliFemtoProtonParticle &AliFemtoProtonParticle::operator=(const AliFemtoProtonPa
  fPDGCodePartonMother = obj.fPDGCodePartonMother;
  fPartonMotherLabel = obj.fPartonMotherLabel;
  fReal = obj.fReal;
+ fProtonTag = obj.fProtonTag;
 
  fPt = obj.fPt;
  fID = obj.fID;
  fPhi = obj.fPhi;
  fEta = obj.fEta;
- 
- 
 
  for(int i=0;i<9;i++)//nine different TPC radii, ok its not good to hard code the number
    {
      fPhistar[i] = obj.fPhistar[i];
-
+     fPositionTPC[i] = obj.fPositionTPC[i];
+     /*
      for(int j=0;j<3;j++)
        {
 	 fPrimPosTPC[i][j] = obj.fPrimPosTPC[i][j];
        }
+     */
    }
 
  return (*this);
